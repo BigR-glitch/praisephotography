@@ -727,13 +727,17 @@ footer {
 #splash.hidden { opacity: 0; pointer-events: none; transform: translateY(-20px); }
 .splash-logo {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem; font-weight: 700; letter-spacing: 0.18em;
+  font-size: clamp(2rem, 10vw, 3.5rem); font-weight: 700;
+  letter-spacing: clamp(0.06em, 2vw, 0.18em);
   color: var(--ivory); text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 0.1em;
+  line-height: 1.1; padding: 0 1rem;
 }
-.splash-logo span { color: var(--wave); }
+.splash-logo span { color: var(--wave); display: block; }
 .splash-sub {
-  font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
-  color: var(--text-dim); font-family: 'Jost', sans-serif;
+  font-size: clamp(0.5rem, 2.2vw, 0.65rem); letter-spacing: clamp(0.18em, 3vw, 0.45em);
+  text-transform: uppercase; color: var(--text-dim); font-family: 'Jost', sans-serif;
+  text-align: center; padding: 0 1.5rem;
 }
 .splash-wave {
   width: 120px; height: 3px; position: relative; overflow: hidden;
